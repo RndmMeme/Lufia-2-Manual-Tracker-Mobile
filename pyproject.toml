@@ -1,7 +1,6 @@
-[tool.briefcase]
 project_name = "Lufia 2 Tracker"
 bundle = "com.rndmmeme"
-version = "1.4.0"
+version = "1.0.0"
 url = "https://github.com/RndmMeme/Lufia-2-Manual-Tracker-Mobile"
 license.file = "LICENSE"
 author = "RndmMeme"

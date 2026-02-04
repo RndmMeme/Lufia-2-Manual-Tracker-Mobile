@@ -1,36 +1,34 @@
-# Lufia 2 Manual Tracker v1.4
+# Lufia 2 Manual Tracker (Mobile Edition)
 
-A feature-rich manual tracker for the "Lufia 2 Ancient Cave" Randomizer (terrorwave).
-Ported from the Auto-Tracker codebase to provide advanced UI features for manual users.
+A dedicated android companion app for tracking your *Lufia II: Rise of the Sinistrals* (Ancient Cave) runs.
 
-## Features
-- **Advanced UI**: customizable Docking interface (Draggable/Floatable panels).
-- **Map Visualization**: 
-    - Auto-scaling map with accessibility logic (Red/Green/Grey dots).
-    - Draggable Character Sprites to mark found party members.
-    - Context menus for location management.
-- **Inventory/Logic**: 
-    - Smart logic engine that calculates accessibility based on your item/spell inventory.
-    - Item search for City shops.
-- **Customization**:
-    - "Edit -> Edit Layout" mode to rearrange icons freely.
-    - Dark Theme enabled by default.
-    - Persistent settings (Window state, layout, colors).
+## Key Features
+
+-   **Touch-Optimized Interface**: Large buttons, clear text, and easy navigation designed specifically for phones.
+-   **Interactive Map**:
+    -   **Tap** to mark locations.
+    -   **Smart Touch**: Automatically selects the nearest location if you miss the dot.
+    -   **Long Press** to assign generic sprites (or Maidens) to locations.
+-   **Item Search**: Quickly find and add items, spells, and equipment via the **(+)** tab.
+-   **Track Everything**:
+    -   **Tools**: Hook, Bomb, Arrows, etc.
+    -   **Scenario Items**: Keys and quest items.
+    -   **Characters**: Track obtained characters and their locations.
+-   **Dark Mode**: Built-in dark theme for comfortable viewing.
 
 ## Installation
-1. Install Python 3.10+.
-2. Install dependencies: `pip install -r requirements.txt` (PyQt6).
-3. Run `src/main.py`.
+
+1.  Download the latest `.apk` from the [Releases](https://github.com/RndmMeme/Lufia-2-Manual-Tracker-Mobile/releases) page.
+2.  Install the APK on your Android device.
+    -   *Note: You may need to enable "Install from Unknown Sources" depending on your settings.*
 
 ## Usage
-- **Left-Click** map dots to cycle their state manually.
-- **Right-Click** map dots to assign characters or check shops.
-- **Click** inventory items to toggle them.
-- **Click** Character icons:
-    - 1x: Marked as Obtained (Half Opacity).
-    - 2x: Marked as Active Party (Full Opacity).
-    - 3x: Reset.
 
-## Credits
-- **RndmMeme**: Original Auto Tracker & Port.
-- **abyssonym**: Lufia 2 Randomizer.
+-   **Map Tab**: View the world map. Tap dots to toggle status (Red -> Green -> Grey).
+-   **Items Tab**: View your inventory.
+-   **Add Tab**: Search for and add items to specific cities.
+-   **Chars Tab**: Toggle obtained characters or drag-and-drop sprites (Edit Mode).
+
+## License
+
+MIT License
