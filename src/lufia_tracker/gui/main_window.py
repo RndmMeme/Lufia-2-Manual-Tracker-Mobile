@@ -2,15 +2,15 @@ from PyQt6.QtWidgets import QMainWindow, QDockWidget, QWidget, QVBoxLayout, QLab
 from PyQt6.QtCore import Qt, QTimer, QThread, pyqtSignal, QSize, QSettings
 import logging
 
-from core.state_manager import StateManager
-from core.data_loader import DataLoader
-from core.logic_engine import LogicEngine
-from core.layout_manager import LayoutManager
+from lufia_tracker.core.state_manager import StateManager
+from lufia_tracker.core.data_loader import DataLoader
+from lufia_tracker.core.logic_engine import LogicEngine
+from lufia_tracker.core.layout_manager import LayoutManager
 from .map_widget import MapWidget
 from .dock_title_bar import DockTitleBar
 from .inventory_widgets import ToolsWidget, ScenarioWidget
 from .menu_ribbon import MenuRibbon
-from utils.constants import STATE_ORDER
+from lufia_tracker.utils.constants import STATE_ORDER
 from .widgets.items_widget import ItemsWidget
 from .widgets.characters_widget import CharactersWidget
 from .widgets.maiden_widget import MaidenWidget

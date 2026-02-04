@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import QGraphicsView, QGraphicsScene, QGraphicsPixmapItem, 
 from PyQt6.QtCore import Qt, pyqtSignal, QPointF
 from PyQt6.QtGui import QPixmap, QBrush, QColor, QPainter, QPolygonF, QPen
 import logging
-from utils.constants import GAME_WORLD_SIZE, CANVAS_SIZE, COLORS
+from lufia_tracker.utils.constants import GAME_WORLD_SIZE, CANVAS_SIZE, COLORS
 
 class InteractiveDot(QGraphicsEllipseItem):
     """

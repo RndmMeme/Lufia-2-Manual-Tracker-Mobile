@@ -1,10 +1,11 @@
 import sys
 import logging
 from PyQt6.QtWidgets import QApplication
-from gui.mobile_window import MobileMainWindow
-from core.data_loader import DataLoader
-from core.logic_engine import LogicEngine
-from core.state_manager import StateManager
+from PyQt6.QtWidgets import QApplication
+from .gui.mobile_window import MobileMainWindow
+from .core.data_loader import DataLoader
+from .core.logic_engine import LogicEngine
+from .core.state_manager import StateManager
 
 # Setup basic logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

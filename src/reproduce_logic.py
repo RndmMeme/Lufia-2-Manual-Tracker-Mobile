@@ -1,6 +1,6 @@
-from core.data_loader import DataLoader
-from core.logic_engine import LogicEngine
-from utils.constants import ALWAYS_ACCESSIBLE_LOCATIONS
+from lufia_tracker.core.data_loader import DataLoader
+from lufia_tracker.core.logic_engine import LogicEngine
+from lufia_tracker.utils.constants import ALWAYS_ACCESSIBLE_LOCATIONS
 
 def test_logic():
     print("--- Starting Logic Debug ---")

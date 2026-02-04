@@ -2,7 +2,7 @@ import json
 import os
 import logging
 from PyQt6.QtCore import QObject, QPoint
-from utils.constants import DATA_DIR
+from lufia_tracker.utils.constants import DATA_DIR
 
 class LayoutManager(QObject):
     """

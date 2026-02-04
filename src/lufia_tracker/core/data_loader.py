@@ -2,7 +2,7 @@ import json
 import logging
 from pathlib import Path
 from typing import Dict, Any
-from utils.constants import DATA_DIR, IMAGES_DIR
+from lufia_tracker.utils.constants import DATA_DIR, IMAGES_DIR
 
 class DataLoader:
     """

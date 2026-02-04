@@ -1,6 +1,6 @@
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QScrollArea
 from .widgets.item_grid import ItemGrid
-from utils.constants import IMAGES_DIR
+from lufia_tracker.utils.constants import IMAGES_DIR
 
 class ToolsWidget(QWidget):
     def __init__(self, data_loader, layout_manager, parent=None):

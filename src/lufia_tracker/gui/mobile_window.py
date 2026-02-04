@@ -6,7 +6,7 @@ from PyQt6.QtCore import Qt, QSize, QSettings
 from PyQt6.QtGui import QAction, QIcon, QFont
 
 import logging
-from core.layout_manager import LayoutManager
+from lufia_tracker.core.layout_manager import LayoutManager
 from .map_widget import MapWidget
 from .inventory_widgets import ToolsWidget, ScenarioWidget
 from .widgets.items_widget import ItemsWidget
@@ -16,7 +16,7 @@ from .widgets.hint_widget import HintWidget
 from .widgets.hint_widget import HintWidget
 from .widgets.item_search_widget import ItemSearchWidget
 from .dialogs.item_search_dialog import ItemSearchDialog
-from utils.constants import STATE_ORDER
+from lufia_tracker.utils.constants import STATE_ORDER
 
 class MobileMainWindow(QMainWindow):
     def __init__(self, state_manager, data_loader, logic_engine):

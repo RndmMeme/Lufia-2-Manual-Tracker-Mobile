@@ -1,0 +1,29 @@
+[tool.briefcase]
+project_name = "Lufia 2 Tracker"
+bundle = "com.rndmmeme"
+version = "1.4.0"
+url = "https://github.com/RndmMeme/Lufia-2-Manual-Tracker-Mobile"
+license.file = "LICENSE"
+author = "RndmMeme"
+author_email = "user@example.com"
+
+[tool.briefcase.app.lufia_tracker]
+formal_name = "Lufia 2 Tracker"
+description = "Manual Tracker for Lufia 2 Ancient Cave"
+long_description = "A mobile-friendly manual tracker for Lufia 2."
+icon = "Lufia_2_Manual_Tracker"
+sources = ["src/lufia_tracker"]
+requires = ["briefcase"]
+start_module = "lufia_tracker"
+
+[tool.briefcase.app.lufia_tracker.windows]
+requires = ["toga-winforms"]
+
+[tool.briefcase.app.lufia_tracker.linux]
+requires = ["toga-gtk"]
+
+[tool.briefcase.app.lufia_tracker.macOS]
+requires = ["toga-cocoa"]
+
+[tool.briefcase.app.lufia_tracker.android]
+requires = ["toga-android"]

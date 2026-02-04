@@ -1,7 +1,7 @@
 import logging
 from typing import Dict, Set, Any
-from core.data_loader import DataLoader
-from utils.constants import ALWAYS_ACCESSIBLE_LOCATIONS
+from lufia_tracker.core.data_loader import DataLoader
+from lufia_tracker.utils.constants import ALWAYS_ACCESSIBLE_LOCATIONS
 
 class LogicEngine:
     """
