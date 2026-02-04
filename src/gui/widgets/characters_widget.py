@@ -13,7 +13,13 @@ class DraggableLabel(QLabel):
 
     def mousePressEvent(self, event):
         if event.button() == Qt.MouseButton.LeftButton:
-            self.clicked_signal.emit()
+            # Check if parent (CharacterCell) is in Edit Mode
+            # If so, ignore event so it bubbles up to parent for dragging
+            parent = self.parent()
+            if hasattr(parent, 'edit_mode') and parent.edit_mode:
+                event.ignore()
+            else:
+                self.clicked_signal.emit()
 
 class CharacterCell(QWidget):
     """

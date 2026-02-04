@@ -265,17 +265,22 @@ class MapWidget(QGraphicsView):
              super().mousePressEvent(event)
              return
              
-        # Check for item at pos
+        # Check for item at pos (Direct Hit)
         pos = self.mapToScene(event.pos())
         item = self._scene.itemAt(pos, self.transform())
         
+        # Logic for processing a hit on a dot
+        def process_dot_click(dot_item, button):
+             if button == Qt.MouseButton.LeftButton:
+                 self.location_clicked.emit(dot_item.location_name)
+                 return True
+             elif button == Qt.MouseButton.RightButton:
+                 self.location_right_clicked.emit(dot_item.location_name)
+                 return True
+             return False
+
         if isinstance(item, InteractiveDot):
-             if event.button() == Qt.MouseButton.LeftButton:
-                 self.location_clicked.emit(item.location_name)
-                 event.accept()
-                 return # Don't propagate
-             elif event.button() == Qt.MouseButton.RightButton:
-                 self.location_right_clicked.emit(item.location_name)
+             if process_dot_click(item, event.button()):
                  event.accept()
                  return # Don't propagate
                  
@@ -284,6 +289,34 @@ class MapWidget(QGraphicsView):
              super().mousePressEvent(event) 
              return
              
+        # --- Forgiving Touch (Nearest Neighbor) ---
+        # If we clicked "nothing" (background), check if we truly missed or just "fat humgered" nearby.
+        if item == self._background_item or item is None:
+             # Find closest dot
+             closest_dot = None
+             min_dist_sq = float('inf')
+             threshold_sq = 40 * 40 # 40px radius (squared)
+             
+             for dot in self._dots.values():
+                 # Center of dot
+                 # rect center is x + size/2
+                 rect = dot.rect()
+                 center_x = rect.x() + rect.width() / 2
+                 center_y = rect.y() + rect.height() / 2
+                 
+                 dx = pos.x() - center_x
+                 dy = pos.y() - center_y
+                 dist_sq = dx*dx + dy*dy
+                 
+                 if dist_sq < threshold_sq and dist_sq < min_dist_sq:
+                     min_dist_sq = dist_sq
+                     closest_dot = dot
+             
+             if closest_dot:
+                 if process_dot_click(closest_dot, event.button()):
+                     event.accept()
+                     return
+
         super().mousePressEvent(event)
 
     def update_player_position(self, x, y):
